@@ -10,7 +10,7 @@ final class NamespaceLibrary {
     }
 
     static java.lang.foreign.SymbolLookup loadLibrary() {
-        System.loadLibrary(findLibraryName("{{ ci.namespace() }}"));
+        System.load(findLibraryName("{{ ci.namespace() }}"));
         return java.lang.foreign.SymbolLookup.loaderLookup();
     }
 
